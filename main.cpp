@@ -4,35 +4,21 @@ using namespace std;
 
 int main()
 {
-    //Count digit of a number
-int number;
+
+                //reverse a number
+
+    int number, reversedNumber=0;//0
     cout<<"Number: ";
-    cin>>number;
+    cin>>number;//123
 
-    if(number==0)
-        cout<<" You have entered 0.\n";
-    else {
+while(number!=0) {
 
-if(number<0) {
-
-number=-1*number;
-
+reversedNumber*=10;
+//int lastDigit=number%10;
+    reversedNumber+=number%10;
+    number/=10;
 }
-
-//1325 -> counter=0
-        //132 -> counter=1
-        //13 -> counter=2 ... 1 -> counter=3 -> counter=4
-
-        int counter=0;
-        while(number>0) {
-
-            number=number/10; //np 123 -> 12 -> 2 -> 0
-                // moglibysmy rowniez napisac : number /=10
-            counter++;
-        }
-        cout<<" Number contains: "<<counter<<" digits\n";
-
-    }
+cout<<"Reversed: "<<reversedNumber;
 
     system("pause>0");
 }
