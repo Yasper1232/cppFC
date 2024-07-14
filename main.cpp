@@ -4,20 +4,18 @@ using namespace std;
 
 int main()
 {
+int grade,sum=0;
 
-//the factorial of a number
-//6!=1*2*3*4*5*6=720
+    for(int i=0;i<3;i++) {
 
-    int number;
-    cout<<"Number: ";
-    cin>>number;
-int factorial=1;
-    for(int i=1;i<=number;i++) {
+        do {
 
-    factorial*=i;
+            cout<<"Enter grade "<<i+1<<": ";
+            cin>>grade;
 
-    }cout<<number<<"!= "<<factorial;
-
+        }while(grade<1 || grade>5);
+sum+=grade;
+    }   cout<<"Your average grade : "<<(float)sum/3.0;
 
     system("pause>0");
 }
