@@ -5,26 +5,24 @@ using namespace std;
 int main()
 {
 
-    int height;
-    int width;
-
-    cout<<"Height: ";
-    cin>>height;
-    cout<<"Width: ";
-    cin>>width;
-
+    int length;
+    cout<<"Length :";
+    cin>>length;
     char symbol;
     cout<<"Symbol: ";
-    cin>>symbol;
+cin>>symbol;
+    cout<<endl;
 
-    for(int h=0;h<height;h++) {
+    for(int i=1;i<=length;i++) {
 
-for(int w=0;w<width;w++) {
+            for(int j=1;j<=i;j++) {
 
-    cout<< setw(3) <<symbol;
-}
-        cout<<endl;
+                    cout<<setw(2)<<symbol;
+
+            }cout<<endl;
+
     }
+
 
     system("pause>0");
 }
