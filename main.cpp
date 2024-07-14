@@ -1,21 +1,29 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
 int main()
 {
 
+    int height;
+    int width;
 
-    //Multiplication table
+    cout<<"Height: ";
+    cin>>height;
+    cout<<"Width: ";
+    cin>>width;
 
-    for(int i=1;i<=10;i++) {
+    char symbol;
+    cout<<"Symbol: ";
+    cin>>symbol;
 
-        for(int j=1;j<=10;j++) {
+    for(int h=0;h<height;h++) {
 
-                cout<<i<<" * "<<j<<" = "<<i*j<<endl;
-        }
-            cout<<endl;
+for(int w=0;w<width;w++) {
 
+    cout<< setw(3) <<symbol;
+}
+        cout<<endl;
     }
 
     system("pause>0");
