@@ -12,6 +12,13 @@ int number;
     if(number==0)
         cout<<" You have entered 0.\n";
     else {
+
+if(number<0) {
+
+number=-1*number;
+
+}
+
 //1325 -> counter=0
         //132 -> counter=1
         //13 -> counter=2 ... 1 -> counter=3 -> counter=4
