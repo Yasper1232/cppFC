@@ -13,9 +13,9 @@ int main()
 cin>>symbol;
     cout<<endl;
 
-    for(int i=1;i<=length;i++) {
+    for(int i=length;i>=1;i--) {
 
-            for(int j=1;j<=i;j++) {
+            for(int j=i;j>=1;j--) {
 
                     cout<<setw(2)<<symbol;
 
