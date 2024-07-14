@@ -5,20 +5,27 @@ using namespace std;
 int main()
 {
 
-                //reverse a number
+int usersPin=1234, pin,errorCounter=0;
 
-    int number, reversedNumber=0;//0
-    cout<<"Number: ";
-    cin>>number;//123
+do {
 
-while(number!=0) {
+    cout<<"PIN: ";
+    cin>>pin;
+    if(pin!=usersPin) {
+errorCounter++;
 
-reversedNumber*=10;
-//int lastDigit=number%10;
-    reversedNumber+=number%10;
-    number/=10;
-}
-cout<<"Reversed: "<<reversedNumber;
+    }
+
+}while(errorCounter<3 && pin!=usersPin);
+
+    if(errorCounter<3) {
+
+cout<<"PIN are correct";
+
+    }else {
+
+        cout<<"Blocked";
+    }
 
     system("pause>0");
 }
