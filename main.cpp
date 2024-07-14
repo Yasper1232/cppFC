@@ -5,27 +5,19 @@ using namespace std;
 int main()
 {
 
-int usersPin=1234, pin,errorCounter=0;
+//the factorial of a number
+//6!=1*2*3*4*5*6=720
 
-do {
+    int number;
+    cout<<"Number: ";
+    cin>>number;
+int factorial=1;
+    for(int i=1;i<=number;i++) {
 
-    cout<<"PIN: ";
-    cin>>pin;
-    if(pin!=usersPin) {
-errorCounter++;
+    factorial*=i;
 
-    }
+    }cout<<number<<"!= "<<factorial;
 
-}while(errorCounter<3 && pin!=usersPin);
-
-    if(errorCounter<3) {
-
-cout<<"PIN are correct";
-
-    }else {
-
-        cout<<"Blocked";
-    }
 
     system("pause>0");
 }
