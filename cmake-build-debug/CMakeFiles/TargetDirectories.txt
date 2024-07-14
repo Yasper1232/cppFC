@@ -1,0 +1,3 @@
+C:/Users/Kacper/CLionProjects/cppFC/cmake-build-debug/CMakeFiles/cppFC.dir
+C:/Users/Kacper/CLionProjects/cppFC/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Kacper/CLionProjects/cppFC/cmake-build-debug/CMakeFiles/rebuild_cache.dir
