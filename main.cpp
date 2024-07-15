@@ -2,27 +2,32 @@
 #include <iomanip>
 using namespace std;
 
+void introduceMe(string name,string city="default",int age=0) {
+
+cout<<"My name is "<<name<<endl;
+cout<<"I am from "<<city<<endl;
+    if(age!=0)
+    cout<<"I am "<<age<<" years old "<<endl;
+}
+
 int main()
 {
 
-    int length;
-    cout<<"Length :";
-    cin>>length;
-    char symbol;
-    cout<<"Symbol: ";
-cin>>symbol;
-    cout<<endl;
+    string name,city23;
+    int age11;
+    cout<<"Name: ";
+    cin>>name;
+    cout<<"City: ";
+    cin>>city23;
+    cout<<"Age: ";
+    cin>>age11;
+    introduceMe(name,city23,age11);
 
-    for(int i=length;i>=1;i--) {
 
-            for(int j=i;j>=1;j--) {
-
-                    cout<<setw(2)<<symbol;
-
-            }cout<<endl;
-
-    }
-
+  //  introduceMe("Kacper","Lask",19);
+    //introduceMe("Anna","New york");
 
     system("pause>0");
 }
+
+
