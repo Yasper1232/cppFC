@@ -16,21 +16,16 @@ bool isPrimeNumber(int number) {
 int main()
 {
 
-    int number;
-    cout<<"Number: ";
-    cin>>number;
 
-//bool isPrimeFlag=isPrimeNumber(number);
+    for(int i=1;i<=100000;i++) {
 
-        if(isPrimeNumber(number)) {
+        if(isPrimeNumber(i)) {
 
-            cout<<"Prime number"<<endl;
-        }else {
-
-            cout<<"Not prime number"<<endl;
-
+            cout<<i<<" is prime number\n";
 
         }
+
+    }
 
     system("pause>0");
 }
