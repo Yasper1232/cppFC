@@ -2,30 +2,35 @@
 #include <iomanip>
 using namespace std;
 
-void introduceMe(string name,string city="default",int age=0) {
+bool isPrimeNumber(int number) {
+    for(int i=2;i<number;i++) {
 
-cout<<"My name is "<<name<<endl;
-cout<<"I am from "<<city<<endl;
-    if(age!=0)
-    cout<<"I am "<<age<<" years old "<<endl;
+        if(number%i==0) {
+            return false;
+        }
+
+    }
+    return true;
 }
 
 int main()
 {
 
-    string name,city23;
-    int age11;
-    cout<<"Name: ";
-    cin>>name;
-    cout<<"City: ";
-    cin>>city23;
-    cout<<"Age: ";
-    cin>>age11;
-    introduceMe(name,city23,age11);
+    int number;
+    cout<<"Number: ";
+    cin>>number;
+
+//bool isPrimeFlag=isPrimeNumber(number);
+
+        if(isPrimeNumber(number)) {
+
+            cout<<"Prime number"<<endl;
+        }else {
+
+            cout<<"Not prime number"<<endl;
 
 
-  //  introduceMe("Kacper","Lask",19);
-    //introduceMe("Anna","New york");
+        }
 
     system("pause>0");
 }
