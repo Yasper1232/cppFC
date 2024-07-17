@@ -2,37 +2,48 @@
 #include <iomanip>
 using namespace std;
 
-int sum(int a,int b);
-double sum(double a,double b);
-float sum(float a,float b,float c);
+void showMenu() {
+
+cout<<"**********MENU**********"<<endl;
+    cout<<"1.Check balance"<<endl;
+    cout<<"2.Deposit"<<endl;
+    cout<<"3.Withdraw"<<endl;
+    cout<<"4.EXIT"<<endl;
+    cout<<"************************"<<endl;
+
+}
 
 int main()
 {
-//function overloading
+int option;
+double balance=500;
 
-cout<<sum(4,3)<<endl;
-cout<<sum(4.4,3.3)<<endl;
-    cout<<sum(4.4,3.3,2.2);
+    //ATM app
+//check balance, deposit money,withdraw money,show menu
+do {
+    showMenu();
+    cout<<"Please choose an option: ";
+    cin>>option;
+system("cls");
+    switch (option) {
+
+        case 1:cout<<"Balance is: "<<balance<<" $"<<endl; break;
+        case 2:cout<<"Deposit amount:";
+        double depositAmount;
+        cin>>depositAmount;
+        balance+=depositAmount; break;
+        case 3:cout<<"Withdraw amount:";
+        double WithdrawAmount;
+        cin>>WithdrawAmount;
+        if(WithdrawAmount<=balance)
+            balance-=WithdrawAmount;
+        else {
+            cout<<"Not enough money"<<endl;
+        }
+        break;
+    }
+}while (option!=4);
 
 
     system("pause>0");
-}
-
-int sum(int a,int b) {
-
-    return a+b;
-
-}
-
-double sum(double a,double b) {
-
-
-return a+b;
-
-}
-
-float sum(float a,float b,float c) {
-
-return a+b+c;
-
 }
