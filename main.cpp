@@ -2,33 +2,30 @@
 #include <iomanip>
 using namespace std;
 
-template<typename T>
+int recursive_sum(int m,int n) {
 
-void Swap(T& a,T& b) {
-
-T temp=a;
-    a=b;
-    b=temp;
+if(m==n)return m;
+    return m + recursive_sum(m+1,n);
 
 }
 
-//uzywajac template nie trzeba powtarzac kodu wiele razy , template dziala na kazdy typ danych
-
+//sum numbers between m-n
 
 
 int main()
 {
 
-            int a=5,b=7;
+    int m=2,n=4;
+    cout<<"Sum= "<<recursive_sum(m,n);
 
-    cout<<a<<" - "<<b<<endl;
-    Swap<int>(a,b);
-    cout<<a<<" - "<<b<<endl;
+   /* int sum=0;
+   ///  int m=2,n=4;
 
-char c='c',d='d';
-    cout<<c<<" - "<<d<<endl;
-Swap<char>(c,d);
-    cout<<c<<" - "<<d<<endl;
+    for(int i=m;i<=n;i++) {
+
+        sum +=i;
+    }cout<<"Sum= "<<sum;*/
+
 
     system("pause>0");
 }
