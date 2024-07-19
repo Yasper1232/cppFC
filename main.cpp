@@ -1,30 +1,40 @@
-#include <iostream>
+#include<iostream>
+#include<list>
 #include <iomanip>
 using namespace std;
 
-int recursive_sum(int m,int n) {
 
-if(m==n)return m;
-    return m + recursive_sum(m+1,n);
+class YoutubeChannel {
+public:
 
-}
+string Name;
+    string OwnerName;
+    int SubscribersCount;
+    list<string> PublishedVideoTitles;
 
-//sum numbers between m-n
+};
 
 
 int main()
 {
 
-    int m=2,n=4;
-    cout<<"Sum= "<<recursive_sum(m,n);
 
-   /* int sum=0;
-   ///  int m=2,n=4;
+    YoutubeChannel yt_channel;
+    yt_channel.Name="Niciakos";
+    yt_channel.OwnerName="Kacper";
+    yt_channel.SubscribersCount=1800;
+    yt_channel.PublishedVideoTitles= {"C++ for beginners Video 1","HTML&&CSS Video 1", "C++ OOP Video 1"};
 
-    for(int i=m;i<=n;i++) {
+cout<<"Name: "<<yt_channel.Name<<endl;
+    cout<<"Owner Name: "<<yt_channel.OwnerName<<endl;
+    cout<<"Subscribers: "<<yt_channel.SubscribersCount<<endl;
+    cout<<"Videos: "<<endl;
+for(string videoTitle: yt_channel.PublishedVideoTitles) {
 
-        sum +=i;
-    }cout<<"Sum= "<<sum;*/
+cout<<videoTitle<<endl;
+
+}
+
 
 
     system("pause>0");
