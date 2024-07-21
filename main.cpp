@@ -12,29 +12,39 @@ string Name;
     int SubscribersCount;
     list<string> PublishedVideoTitles;
 
+    YoutubeChannel(string name,string ownerName) {
+
+        Name=name;
+        OwnerName=ownerName;
+        SubscribersCount=0;
+
+    }
+
+    void GetInfo() {
+
+        cout<<"Name: "<<Name<<endl;
+        cout<<"Owner Name: "<<OwnerName<<endl;
+        cout<<"Subscribers: "<<SubscribersCount<<endl;
+        cout<<"Videos: "<<endl;
+        for(string videoTitle:PublishedVideoTitles) {
+
+            cout<<videoTitle<<endl;
+
+        }
+
+    }
 };
 
 
-int main()
-{
+int main() {
+   YoutubeChannel yt_channel1("Niciakos","Kacper");
+    yt_channel1.PublishedVideoTitles.push_back("C++ for begginers");
+    yt_channel1.PublishedVideoTitles.push_back("HTML & CSS for begginers");
+    yt_channel1.PublishedVideoTitles.push_back("C++ OOP");
 
-
-    YoutubeChannel yt_channel;
-    yt_channel.Name="Niciakos";
-    yt_channel.OwnerName="Kacper";
-    yt_channel.SubscribersCount=1800;
-    yt_channel.PublishedVideoTitles= {"C++ for beginners Video 1","HTML&&CSS Video 1", "C++ OOP Video 1"};
-
-cout<<"Name: "<<yt_channel.Name<<endl;
-    cout<<"Owner Name: "<<yt_channel.OwnerName<<endl;
-    cout<<"Subscribers: "<<yt_channel.SubscribersCount<<endl;
-    cout<<"Videos: "<<endl;
-for(string videoTitle: yt_channel.PublishedVideoTitles) {
-
-cout<<videoTitle<<endl;
-
-}
-
+    YoutubeChannel yt_channel2("AmySings","Amy");
+yt_channel1.GetInfo();
+    yt_channel2.GetInfo();
 
 
     system("pause>0");
