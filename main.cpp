@@ -5,13 +5,12 @@ using namespace std;
 
 
 class YoutubeChannel {
-public:
-
+private:
 string Name;
     string OwnerName;
     int SubscribersCount;
     list<string> PublishedVideoTitles;
-
+public:
     YoutubeChannel(string name,string ownerName) {
 
         Name=name;
@@ -31,20 +30,40 @@ string Name;
             cout<<videoTitle<<endl;
 
         }
+    }
+
+    void Subscribe() {
+
+        SubscribersCount++;
 
     }
+    void UnSubscribe() {
+
+        if(SubscribersCount>0)
+        SubscribersCount--;
+
+    }
+
+        void PublishVideo(string title) {
+
+        PublishedVideoTitles.push_back(title);
+
+    }
+
+
+
 };
 
 
 int main() {
    YoutubeChannel yt_channel1("Niciakos","Kacper");
-    yt_channel1.PublishedVideoTitles.push_back("C++ for begginers");
-    yt_channel1.PublishedVideoTitles.push_back("HTML & CSS for begginers");
-    yt_channel1.PublishedVideoTitles.push_back("C++ OOP");
+    yt_channel1.PublishVideo("C++ for begginers");
+    yt_channel1.PublishVideo("HTML & CSS for begginers");
+    yt_channel1.PublishVideo("C++ OOP");
 
-    YoutubeChannel yt_channel2("AmySings","Amy");
+
+yt_channel1.UnSubscribe();
 yt_channel1.GetInfo();
-    yt_channel2.GetInfo();
 
 
     system("pause>0");
