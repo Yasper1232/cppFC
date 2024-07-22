@@ -7,16 +7,19 @@ using namespace std;
 class YoutubeChannel {
 private:
 string Name;
-    string OwnerName;
+
     int SubscribersCount;
     list<string> PublishedVideoTitles;
+protected:
+    string OwnerName;
+    int ContentQuality;
 public:
     YoutubeChannel(string name,string ownerName) {
 
         Name=name;
         OwnerName=ownerName;
         SubscribersCount=0;
-
+        ContentQuality =0;
     }
 
     void GetInfo() {
@@ -50,21 +53,58 @@ public:
 
     }
 
+            void CheckAnalitics() {
 
+        if(ContentQuality<5)
+            cout<<Name<<" Has bad quality content."<<endl;
+        else
+            cout<<Name<<" has great content"<<endl;
+    }
 
 };
 
+class CookingYoutubeChannel:public YoutubeChannel{
+public:
+    CookingYoutubeChannel(string name,string ownerName):YoutubeChannel(name,ownerName) {
+
+    }
+
+    void Practice() {
+        cout<<OwnerName<<" is practicing cooking, learing new recipes, experimenting with spices ..."<<endl;
+        ContentQuality++;
+    }
+};
+
+class SingersYoutubeChannel:public YoutubeChannel{
+public:
+    SingersYoutubeChannel(string name,string ownerName):YoutubeChannel(name,ownerName) {
+
+    }
+
+    void Practice() {
+        cout<<OwnerName<<" is taking singing classes , learning new songsm learning how to dance ... "<<endl;
+        ContentQuality++;
+
+    }
+};
 
 int main() {
-   YoutubeChannel yt_channel1("Niciakos","Kacper");
-    yt_channel1.PublishVideo("C++ for begginers");
-    yt_channel1.PublishVideo("HTML & CSS for begginers");
-    yt_channel1.PublishVideo("C++ OOP");
 
+    CookingYoutubeChannel cookingytChannel("Amy's Kitchen","Amy");
+    SingersYoutubeChannel singersYtChannel("JohnSings","John");
 
-yt_channel1.UnSubscribe();
-yt_channel1.GetInfo();
+    cookingytChannel.Practice();
+    singersYtChannel.Practice();
+    singersYtChannel.Practice();
+    singersYtChannel.Practice();
+    singersYtChannel.Practice();
+    singersYtChannel.Practice();
 
+    YoutubeChannel * yt1=&cookingytChannel;
+    YoutubeChannel * yt2=&singersYtChannel;
+
+    yt1->CheckAnalitics();
+    yt2->CheckAnalitics();
 
     system("pause>0");
 }
